@@ -1,0 +1,53 @@
+.success-card {
+    text-align: center;
+    padding: 40px 32px;
+}
+
+.success-icon {
+    margin-bottom: 24px;
+}
+
+.success-card h1 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.success-message {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.success-details {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+}
+
+.back-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 14px 24px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #0052CC;
+}
+
+@media (max-width: 768px) {
+    .success-card {
+        padding: 32px 24px;
+    }
+    
+    .success-card h1 {
+        font-size: 20px;
+    }
+} 
