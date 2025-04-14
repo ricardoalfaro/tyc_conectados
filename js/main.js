@@ -156,3 +156,22 @@ form.addEventListener('submit', (e) => {
         window.location.href = 'success.html';
     }
 });
+
+// Detectar scroll para aplicar padding a la columna de imagen
+document.addEventListener('DOMContentLoaded', function() {
+    const imageColumn = document.querySelector('.image-column');
+    const header = document.querySelector('.main-header');
+    
+    if (imageColumn && header) {
+        window.addEventListener('scroll', function() {
+            const headerHeight = header.offsetHeight;
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > headerHeight) {
+                imageColumn.classList.add('sticky');
+            } else {
+                imageColumn.classList.remove('sticky');
+            }
+        });
+    }
+});
