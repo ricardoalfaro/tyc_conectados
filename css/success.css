@@ -1,53 +1,150 @@
+:root {
+    --success-primary: #ff010b;
+    --success-background: #E6F0FF;
+    --success-text: #1A1A1A;
+    --success-text-secondary: #666666;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
 .success-card {
+    background: var(--card-background);
+    border-radius: 16px;
     text-align: center;
-    padding: 40px 32px;
+    padding: 48px 32px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 .success-icon {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.success-icon svg {
+    width: 80px;
+    height: 80px;
+}
+
+.success-icon circle {
+    fill: #ffebeb;
+}
+
+.success-icon path {
+    fill: var(--success-primary);
 }
 
 .success-card h1 {
     margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 600;
-    color: var(--text-color);
+    color: var(--success-text);
+    animation: fadeInUp 0.5s ease-out 0.2s both;
 }
 
 .success-message {
-    font-size: 16px;
-    color: var(--text-color);
+    font-size: 18px;
+    color: var(--success-text);
     margin-bottom: 8px;
+    animation: fadeInUp 0.5s ease-out 0.3s both;
 }
 
 .success-details {
-    font-size: 14px;
-    color: var(--text-secondary);
+    font-size: 16px;
+    color: var(--success-text-secondary);
     margin-bottom: 32px;
+    animation: fadeInUp 0.5s ease-out 0.4s both;
 }
 
 .back-button {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: var(--success-primary);
     color: white;
-    padding: 14px 24px;
-    border-radius: var(--border-radius);
+    padding: 14px 32px;
+    border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+    animation: fadeInUp 0.5s ease-out 0.5s both;
 }
 
 .back-button:hover {
-    background-color: #0052CC;
+    background-color: #e6010a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(255, 1, 11, 0.2);
 }
 
-@media (max-width: 768px) {
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .main-content {
+        padding: 20px;
+    }
+
     .success-card {
         padding: 32px 24px;
+        border-radius: 12px;
     }
-    
+
+    .success-icon svg {
+        width: 64px;
+        height: 64px;
+    }
+
     .success-card h1 {
-        font-size: 20px;
+        font-size: 24px;
+    }
+
+    .success-message {
+        font-size: 16px;
+    }
+
+    .success-details {
+        font-size: 14px;
+    }
+
+    .back-button {
+        padding: 12px 24px;
+        width: 100%;
     }
 } 

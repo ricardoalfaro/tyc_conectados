@@ -320,25 +320,28 @@ h2:first-child {
 }
 
 .submit-button {
-    background-color: var(--header-color);
+    display: inline-block;
+    width: auto;
+    padding: 14px 32px;
+    background-color: var(--primary-color);
     color: white;
-    height: 48px;
     border: none;
     border-radius: var(--border-radius);
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-    width: 100%;
     transition: all 0.2s ease;
+    display: block;
 }
 
 .submit-button:disabled {
-    opacity: 0.5;
+    background-color: #cccccc;
     cursor: not-allowed;
+    opacity: 0.7;
 }
 
 .submit-button:not(:disabled):hover {
-    background-color: #CC0009;
+    background-color: #e6010a;
 }
 
 /* Estilizar la barra de desplazamiento */
