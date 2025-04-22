@@ -1,15 +1,16 @@
 :root {
-    --success-primary: #ff010b;
+    --success-primary: #EC0000;
     --success-background: #E6F0FF;
     --success-text: #1A1A1A;
     --success-text-secondary: #666666;
+    --secondary-color-getnet: #9E3667;
 }
 
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-color);
+    background: linear-gradient(180deg, var(--success-primary) 0%, var(--secondary-color-getnet) 100%);
     margin: 0;
 }
 

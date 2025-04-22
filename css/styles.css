@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #ff010b;
+    --primary-color: #EC0000;
     --text-color: #1A1A1A;
     --text-secondary: #666666;
     --background-color: #F5F5F5;
@@ -9,7 +9,8 @@
     --checkbox-size: 20px;
     --input-height: 48px;
     --border-radius: 8px;
-    --header-color: #FF010B;
+    --header-color: #ff010a;
+    --secondary-color-getnet: #9E3667;
 }
 
 * {
@@ -20,7 +21,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color-getnet) 100%);
     color: var(--text-color);
     line-height: 1.5;
     min-height: 100vh;
@@ -29,7 +30,7 @@ body {
 }
 
 .main-header {
-    background-color: var(--primary-color);
+    background-color: var(--header-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     display: flex;
@@ -115,7 +116,7 @@ h1 {
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     margin: 24px 0 16px;
     color: var(--header-color);
@@ -138,7 +139,7 @@ h2:first-child {
 
 .about-section p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--text-color);
     margin-bottom: 24px;
 }
